@@ -31,6 +31,10 @@ public:
 
 	void insertKeyValue(string key, int value){
 		// ...
+		if(m.count(key) != 0){
+			auto it = m[key];
+			it->value = value;
+		}
 
 	}
 
