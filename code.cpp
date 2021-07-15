@@ -80,6 +80,30 @@ public:
 int main()
 {
 	/* code */
+	LRUCache lru(3);
+	lru.insertKeyValue("mango", 10);
+	lru.insertKeyValue("apple", 20);
+	lru.insertKeyValue("berries", 40);
+	cout << lru.mostRecentKey()<< endl;
+
+	lru.insertKeyValue("mango", 40);
+	cout << lru.mostRecentKey() << endl;
+
+	lru.insertKeyValue("banans", 50);
+
+	if(lru.getValue("apple") == NULL){
+		cout << "apple doesn't exist";
+	}
+
+	if(lru.getValue("strawberry") == NULL){
+		cout << "strawberry doesn't exist" << endl;
+	}
+
+	if(lru.getValue("mango") == NULL){
+		cout << "mango doesn't exist";
+	}
+
+
 	return 0;
 }
 
